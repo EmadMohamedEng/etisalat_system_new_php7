@@ -1,0 +1,23 @@
+To: tamer@ivas.com.eg
+Subject: Contract عقد قديم 1that assigned to department Developmentis approved by his manager emad mohamed
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: emad@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								Contract عقد قديم 1that assigned to department Developmentis approved by his manager emad mohamed
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\contracts/approve?contract_id=3"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

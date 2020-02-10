@@ -1,0 +1,113 @@
+/** Add your custom css RTL Codes */
+body {
+	direction: rtl;
+}
+
+.nav {
+	padding-right: 0;
+}
+
+.minimalize-btn {
+	margin: 14px 20px 5px 5px;
+}
+
+.navbar-top-links li:last-child {
+  margin-left: 15px;
+}
+
+.dropdown-menu > li > a {
+	text-align: right;
+}
+
+.m-r-sm {
+  margin-left: 10px;
+}
+
+.pull-left {
+  float: right !important;
+}
+
+body.minimize-sidemenu .footer.fixed, body.body-small.minimize-sidemenu .footer.fixed, body.minimize-sidemenu #page-wrapper {
+  margin: 0 70px 0 0px;
+}
+
+.sbox-title h3 {
+  float: right;
+ }
+ 
+.footer.fixed {
+	margin-left: 0px;
+	margin-right: 220px !important;
+	direction: ltr;
+}
+
+.expanded-menu > li > a i {
+	float: right;
+	margin: -12px -8px -12px 10px;
+	border-left: 1px solid rgba(255, 255, 255, 0.05);
+	border-right: none;
+}
+
+.arrow {
+  float: left;
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.fancybox-margin {
+  /*margin-left: 17px;*/
+  margin-right: 0px !important;
+}
+
+.fancybox-lock .fancybox-overlay {
+	direction: ltr;
+}
+
+th {
+  text-align: right;
+}
+
+.flag-lang{
+	margin-left: 5px;
+}
+
+.back-to-top {
+	bottom: 50px;
+	left: 15px;
+    right: inherit;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.2);
+}
+
+.back-to-top:hover {
+	background: rgba(0,0,0,0.5);
+}
+
+/*.datepicker.datepicker-dropdown.dropdown-menu{
+	left: inherit !important;
+	right: 760px !important;
+}*/
+
+
+/*-----Start media (min-width: 768px)-----*/
+@media (min-width: 768px) {
+#page-wrapper {
+	margin: 0 220px 0 0;
+}
+
+.navbar-header {
+  float: right;
+}
+
+.navbar-right {
+  float: left !important;
+}
+
+.navbar-right .dropdown-menu {
+  left: 0;
+  right: auto;
+}
+
+}
+/*-----End media (min-width: 768px)-----*/

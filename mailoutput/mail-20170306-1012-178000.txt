@@ -1,0 +1,23 @@
+To: tamer@ivas.com.eg
+Subject: العقد عقد جديد 6 تم الموا� قة عليه بواسطة المدير
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: haitham@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								العقد عقد جديد 6 تم الموافقة عليه بواسطة المدير
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\contracts/show/9"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

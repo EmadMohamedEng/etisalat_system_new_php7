@@ -1,0 +1,19 @@
+To: emad@ivas.com.eg
+Subject: [ HR System ] REQUEST PASSWORD RESET
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: HR System <>
+
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h2>Password Reset</h2>
+
+		<div>
+			To reset your password, complete this form: http://localhost:8000/user/reset/i1DgnqCyhcqKlLR8JXhDW63dloADEXqwtm7zmWIc.
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+To: tamer@ivas.com.eg
+Subject: The contract: project8 is refused
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: yousef@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								The contract: project8 is refused
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\contractdepartments/show/9"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

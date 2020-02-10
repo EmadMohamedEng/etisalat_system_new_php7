@@ -1,0 +1,37 @@
+.img_form {
+weidth:100px;
+height:100px
+}
+
+.rest_user_password{
+    width:100%;
+    min-height:40px;
+    clear: both;
+    text-align: center;
+    margin-left: 356px;
+}
+
+    input[type='file'] {
+  color: transparent;
+}
+
+
+.emp_vacation_margin{
+    margin-top: 5px;
+}
+
+
+.tabs_style{
+    margin: 0px;
+    width: 484px; 
+    height: 100px;
+}
+
+.answer_margin{
+    margin-bottom: 10px;
+    
+}
+
+.answer_margin_top{
+   margin-top: 30px !important;
+}

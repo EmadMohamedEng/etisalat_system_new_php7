@@ -1,0 +1,23 @@
+To: tamer@ivas.com.eg
+Subject: Contract  contract1 is approved by CEO
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: haitham@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								Contract  contract1 is approved by CEO
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\buycontracts/show/1"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

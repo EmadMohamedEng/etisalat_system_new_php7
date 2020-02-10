@@ -1,0 +1,23 @@
+To: Sara.sharkawy@ivas.com.eg
+Subject: New overtime request from manager:  youssef wadea
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: yousef@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								New overtime request from manager:  youssef wadea
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\overtimes/update/4"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

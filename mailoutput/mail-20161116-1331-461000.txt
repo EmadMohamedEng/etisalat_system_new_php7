@@ -1,0 +1,23 @@
+To: emad@ivas.com.eg
+Subject: Your permission is refused due to : hhhh
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: yousef@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								Your permission is refused due to : hhhh
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\mypermissions/show/1"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

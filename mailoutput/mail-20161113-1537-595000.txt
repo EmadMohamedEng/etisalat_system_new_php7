@@ -1,0 +1,23 @@
+To: emad@ivas.com.eg
+Subject: Your overtime is refused due to : ggggggggggg
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: yousef@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								Your overtime is refused due to : ggggggggggg
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\myovertime/show/4"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

@@ -1,0 +1,23 @@
+To: emad@ivas.com.eg
+Subject: Your travelling request is refused due to : ggggggggggggggggggggggg
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: yousef@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								Your travelling request is refused due to : ggggggggggggggggggggggg
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\mytravelling/show/4"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

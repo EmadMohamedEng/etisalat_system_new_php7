@@ -1,0 +1,23 @@
+To: emad@ivas.com.eg
+Subject: عقد جديد عقد جديد 4 مرتبط بالقسم الخاص بك Development
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: ahmed333555777@gmail.com
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								عقد جديد عقد جديد 4 مرتبط بالقسم الخاص بك Development
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\contractdepartments/update/18"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

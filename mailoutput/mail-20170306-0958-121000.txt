@@ -1,0 +1,23 @@
+To: haitham@ivas.com.eg
+Subject: العقد عقد جديد 6 وا� ق عليه جميع الأقسام
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: tamer@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								العقد عقد جديد 6 وافق عليه جميع الأقسام
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\contracts/approve?contract_id=9"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

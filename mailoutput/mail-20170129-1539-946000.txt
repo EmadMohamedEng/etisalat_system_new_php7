@@ -1,0 +1,23 @@
+To: emad@ivas.com.eg
+Subject: Contract: project8 related with your department:  Development is approved by CEO
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: haitham@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								Contract: project8 related with your department:  Development is approved by CEO
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\contracts/show/14"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>

@@ -1,0 +1,23 @@
+To: yousef@ivas.com.eg
+Subject: Your meeting is approved by your HR
+MIME-Version: 1.0
+Content-type: text/html; charset=iso-8859-1
+From: Sara.sharkawy@ivas.com.eg
+
+<!DOCTYPE html>
+					<html lang="en-US">
+						<head>
+							<meta charset="utf-8">
+						</head>
+						<body>
+					
+							<div>
+								Your meeting is approved by your HR
+                                                                    <br>
+                                                                    You can check this at this link :
+                                                                    <a href="http://localhost:8000\mymeetings/show/3"> link </a> 
+                                                                    
+							</div>
+							
+						</body>
+					</html>
