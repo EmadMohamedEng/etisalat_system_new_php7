@@ -54,6 +54,19 @@ Route::post('phonescategories/multisearch', 'PhonescategoriesController@postMult
 Route::post('phonescategories/filter', 'PhonescategoriesController@postFilter');
 
 // Route::controller('phones', 'PhonesController');
+Route::get('phones', 'PhonesController@getIndex');
+Route::get('phone/fromFile', 'PhonesController@fromFileForm');
+Route::get('phone/newSubscriberDownload', 'PhonesController@newSubscriberDownload');
+Route::post('phone/saveFromFile', 'PhonesController@saveFromFile');
+Route::post('phones/filter/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@postFilter');
+Route::post('phones/comboselect/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@postComboselect');
+Route::post('phones/save/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@postSave');
+Route::post('phones/delete/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@postDelete');
+Route::post('phones/multisearch/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@postMultisearch');
+Route::get('phones/update/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@getUpdate');
+Route::get('phones/show/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@getShow');
+Route::get('phones/download/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@getDownload');
+
 // Route::controller('subscriberhistory', 'SubscriberhistoryController');
 
 Route::group(['middleware' => 'auth'], function () {
