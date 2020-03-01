@@ -68,6 +68,15 @@ Route::get('phones/show/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesControll
 Route::get('phones/download/{one?}/{two?}/{three?}/{four?}/{five?}', 'PhonesController@getDownload');
 
 // Route::controller('subscriberhistory', 'SubscriberhistoryController');
+Route::get('subscriberhistory', 'SubscriberhistoryController@getIndex');
+Route::post('subscriberhistory/filter/{one?}/{two?}/{three?}/{four?}/{five?}', 'SubscriberhistoryController@postFilter');
+Route::post('subscriberhistory/comboselect/{one?}/{two?}/{three?}/{four?}/{five?}', 'SubscriberhistoryController@postComboselect');
+Route::post('subscriberhistory/save/{one?}/{two?}/{three?}/{four?}/{five?}', 'SubscriberhistoryController@postSave');
+Route::post('subscriberhistory/delete/{one?}/{two?}/{three?}/{four?}/{five?}', 'SubscriberhistoryController@postDelete');
+Route::post('subscriberhistory/multisearch/{one?}/{two?}/{three?}/{four?}/{five?}', 'SubscriberhistoryController@postMultisearch');
+Route::get('subscriberhistory/update/{one?}/{two?}/{three?}/{four?}/{five?}', 'SubscriberhistoryController@getUpdate');
+Route::get('subscriberhistory/show/{one?}/{two?}/{three?}/{four?}/{five?}', 'SubscriberhistoryController@getShow');
+Route::get('subscriberhistory/download/{one?}/{two?}/{three?}/{four?}/{five?}', 'SubscriberhistoryController@getDownload');
 
 Route::group(['middleware' => 'auth'], function () {
 

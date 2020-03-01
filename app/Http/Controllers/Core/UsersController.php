@@ -99,9 +99,9 @@ class UsersController extends Controller
 
         $userId = \Auth::user()->id;
         if ($userId != 1) {
-            $groups = Groups::where('group_id', '!=', '1')->lists('name', 'group_id');
+            $groups = Groups::where('group_id', '!=', '1')->pluck('name', 'group_id');
         } else {
-            $groups = Groups::lists('name', 'group_id');
+            $groups = Groups::pluck('name', 'group_id');
         }
 
         if ($id == '') {

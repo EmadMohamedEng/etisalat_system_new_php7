@@ -80,7 +80,7 @@ class PhonesController extends Controller
         $lmt = 1000000;
         $i = 0;
         $subscribers_ = \DB::select('SELECT SUBSTRING(phone, 3,10) as phone  FROM `tb_susbcribers` WHERE `ServiceName` LIKE "باقة العفاسي الدينية" ');
-        $subscribers_ = array_map(create_function('$o', 'return $o->phone;'), $subscribers_);
+        $subscribers_ = array_map(function ($o) {return $o->phone;}, $subscribers_);
         // return ['phone'];
         while (true) {
             $phones = \DB::select('SELECT phone FROM `tb_phones` WHERE phone NOT IN ("' . implode('","', $subscribers_) . '")  LIMIT ' . $offset . ',' . $lmt . ';');

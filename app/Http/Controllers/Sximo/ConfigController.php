@@ -4,47 +4,49 @@ namespace App\Http\Controllers\sximo;
 
 use App\Http\Controllers\controller;
 use App\Models\Core\Groups;
-use App\Models\Core\Config;
-use App\User;
 use Illuminate\Http\Request;
-use Validator,
-    Input,
-    Redirect;
+use Input;
+use Redirect;
+use Validator;
 
-class ConfigController extends Controller {
+class ConfigController extends Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
-        if (\Auth::check() ) {  // or \Session::get('gid') != '1'
-           //	echo 'redirect'; die;
+        if (\Auth::check()) { // or \Session::get('gid') != '1'
+            //    echo 'redirect'; die;
             return Redirect::to('dashboard');
         };
     }
 
-    public function getIndex() {
+    public function getIndex()
+    {
         $this->data['active'] = '';
-		$this->data['cnf_weekdays']=\DB::table('tb_config')->value('cnf_weekdays');
+        $this->data['cnf_weekdays'] = \DB::table('tb_config')->value('cnf_weekdays');
         return view('sximo.config.index', $this->data);
     }
 
-    static function postSave(Request $request) {
-        
+    public static function postSave(Request $request)
+    {
+
         $rules = array(
             'cnf_appname' => 'required|min:2',
             'cnf_appdesc' => 'required|min:2',
-         //   'cnf_comname' => 'required|min:2',
-          //  'cnf_email' => 'required|email',
-        //    'vacations_per_year' => 'required|integer',
-          //  'permissions_per_month' => 'required|integer',
+            'logo' => 'dimensions:max_width=155,max_height=30',
+            // 'cnf_comname' => 'required|min:2',
+            // 'cnf_email' => 'required|email',
+            // 'vacations_per_year' => 'required|integer',
+            // 'permissions_per_month' => 'required|integer',
         );
-		// $weekdays= implode(",",$request->cnf_weekdays);
+        // $weekdays= implode(",",$request->cnf_weekdays);
         $validator = Validator::make($request->all(), $rules);
         if (!$validator->fails()) {
             $logo = '';
             if (!is_null(Input::file('logo'))) {
-
                 $file = Input::file('logo');
-                $destinationPath = public_path() . '/sximo/images/';
+                $destinationPath = base_path() . '/sximo/images/';
                 $filename = $file->getClientOriginalName();
                 $extension = $file->getClientOriginalExtension(); //if you need extension of the file
                 $logo = 'backend-logo.' . $extension;
@@ -60,7 +62,7 @@ class ConfigController extends Controller {
             $val .= "define('CNF_METADESC','" . $request->input('cnf_metadesc') . "');\n";
             $val .= "define('CNF_GROUP','" . CNF_GROUP . "');\n";
             $val .= "define('CNF_ACTIVATION','" . CNF_ACTIVATION . "');\n";
-            $val .= "define('CNF_MULTILANG','" . (!is_null($request->input('cnf_multilang')) ? 1 : 0 ) . "');\n";
+            $val .= "define('CNF_MULTILANG','" . (!is_null($request->input('cnf_multilang')) ? 1 : 0) . "');\n";
             $val .= "define('CNF_LANG','" . $request->input('cnf_lang') . "');\n";
             $val .= "define('CNF_REGIST','" . CNF_REGIST . "');\n";
             $val .= "define('CNF_FRONT','" . CNF_FRONT . "');\n";
@@ -68,19 +70,18 @@ class ConfigController extends Controller {
             $val .= "define('CNF_THEME','" . $request->input('cnf_theme') . "');\n";
             $val .= "define('CNF_RECAPTCHAPUBLICKEY','" . CNF_RECAPTCHAPUBLICKEY . "');\n";
             $val .= "define('CNF_RECAPTCHAPRIVATEKEY','" . CNF_RECAPTCHAPRIVATEKEY . "');\n";
-            $val .= "define('CNF_MODE','" . (!is_null($request->input('cnf_mode')) ? 'production' : 'development' ) . "');\n";
-            $val .= "define('CNF_LOGO','" . ($logo != '' ? $logo : CNF_LOGO ) . "');\n";
+            $val .= "define('CNF_MODE','" . (!is_null($request->input('cnf_mode')) ? 'production' : 'development') . "');\n";
+            $val .= "define('CNF_LOGO','" . ($logo != '' ? $logo : CNF_LOGO) . "');\n";
             $val .= "define('CNF_ALLOWIP','" . CNF_ALLOWIP . "');\n";
             $val .= "define('CNF_RESTRICIP','" . CNF_RESTRICIP . "');\n";
-         //   $val .= "define('CNF_VACATION','" . $request->input('cnf_vacation_days') . "');\n";
-        //    $val .= "define('CNF_START_HOUR','" . $request->input('cnf_start_hour') . "');\n";
-           // $val .= "define('CNF_END_HOUR','" . $request->input('cnf_end_hour') . "');\n";
-		//	$val .= "define('CNF_WEEKDAYS','" . $weekdays . "');\n";
-          //  $val .= "define('CNF_TOLERANCE','" . $request->input('cnf_tolerance') . "');\n";
-         //    $val .= "define('VACATIONS_PER_YEAR','" . $request->input('vacations_per_year') . "');\n";
-          //   $val .= "define('PERMISSIONS_PER_MONTH','" . $request->input('permissions_per_month') . "');\n";
-            $val .= "define('CNF_BUILDER_TOOL','" . (!is_null($request->input('cnf_show_builder_tool')) ? 1 : 0 ) . "');\n";
-
+            // $val .= "define('CNF_VACATION','" . $request->input('cnf_vacation_days') . "');\n";
+            // $val .= "define('CNF_START_HOUR','" . $request->input('cnf_start_hour') . "');\n";
+            // $val .= "define('CNF_END_HOUR','" . $request->input('cnf_end_hour') . "');\n";
+            // $val .= "define('CNF_WEEKDAYS','" . $weekdays . "');\n";
+            // $val .= "define('CNF_TOLERANCE','" . $request->input('cnf_tolerance') . "');\n";
+            // $val .= "define('VACATIONS_PER_YEAR','" . $request->input('vacations_per_year') . "');\n";
+            // $val .= "define('PERMISSIONS_PER_MONTH','" . $request->input('permissions_per_month') . "');\n";
+            $val .= "define('CNF_BUILDER_TOOL','" . (!is_null($request->input('cnf_show_builder_tool')) ? 1 : 0) . "');\n";
 
             $val .= "?>";
 
@@ -96,24 +97,25 @@ class ConfigController extends Controller {
                 'cnf_metakey' => $request->input('cnf_metakey'),
                 'cnf_metadesc' => $request->input('cnf_metadesc'),
                 'cnf_logo' => $logo != '' ? $logo : CNF_LOGO,
-             //   'cnf_vacation_days' => $request->input('cnf_vacation_days'),
-             //   'cnf_start_hour' => $request->input('cnf_start_hour'),
-             //   'cnf_end_hour' => $request->input('cnf_end_hour'),
-              //  'cnf_weekdays' => $weekdays,
-           //     'cnf_tolerance' => $request->input('cnf_tolerance'),
-            //    'vacations_per_year' => $request->input('vacations_per_year'),
-             //  'permissions_per_month' => $request->input('permissions_per_month'),
-                'cnf_show_builder_tool' => (!is_null($request->input('cnf_show_builder_tool')) ? 1 : 0 ),
+                // 'cnf_vacation_days' => $request->input('cnf_vacation_days'),
+                // 'cnf_start_hour' => $request->input('cnf_start_hour'),
+                // 'cnf_end_hour' => $request->input('cnf_end_hour'),
+                // 'cnf_weekdays' => $weekdays,
+                // 'cnf_tolerance' => $request->input('cnf_tolerance'),
+                // 'vacations_per_year' => $request->input('vacations_per_year'),
+                // 'permissions_per_month' => $request->input('permissions_per_month'),
+                'cnf_show_builder_tool' => (!is_null($request->input('cnf_show_builder_tool')) ? 1 : 0),
             );
             \DB::table('tb_config')->where('cnf_id', 1)->update($data);
             return Redirect::to('sximo/config')->with('messagetext', 'Setting Has Been Save Successful')->with('msgstatus', 'success');
         } else {
             return Redirect::to('sximo/config')->with('messagetext', 'The following errors occurred')->with('msgstatus', 'success')
-                            ->withErrors($validator)->withInput();
+                ->withErrors($validator)->withInput();
         }
     }
 
-    public function getEmail() {
+    public function getEmail()
+    {
 
         $regEmail = base_path() . "/resources/views/user/emails/registration.blade.php";
         $resetEmail = base_path() . "/resources/views/user/emails/auth/reminder.blade.php";
@@ -128,7 +130,8 @@ class ConfigController extends Controller {
         return view('sximo.config.email', $this->data);
     }
 
-    function postEmail(Request $request) {
+    public function postEmail(Request $request)
+    {
 
         //print_r($_POST);exit;
         $rules = array(
@@ -152,24 +155,25 @@ class ConfigController extends Controller {
         } else {
 
             return Redirect::to('sximo/config/email')->with('messagetext', 'The following errors occurred')->with('msgstatus', 'success')
-                            ->withErrors($validator)->withInput();
+                ->withErrors($validator)->withInput();
         }
     }
 
-    public function getSecurity() {
+    public function getSecurity()
+    {
 
         $this->data = array(
             'groups' => Groups::all(),
             'pageTitle' => 'Login And Security',
             'pageNote' => 'Login Configuration and Setting',
-            'active' => 'security'
+            'active' => 'security',
         );
-
 
         return view('sximo.config.security', $this->data);
     }
 
-    public function postLogin(Request $request) {
+    public function postLogin(Request $request)
+    {
 
         $rules = array(
         );
@@ -205,22 +209,23 @@ class ConfigController extends Controller {
             return Redirect::to('sximo/config/security')->with('messagetext', 'Setting Has Been Save Successful')->with('msgstatus', 'success');
         } else {
             return Redirect::to('sximo/config/security')->with('messagetext', 'The following errors occurred')->with('msgstatus', 'error')
-                            ->withErrors($validator)->withInput();
+                ->withErrors($validator)->withInput();
         }
     }
 
-    public function getLog($type = null) {
-
+    public function getLog($type = null)
+    {
 
         $this->data = array(
             'pageTitle' => 'Help Manual',
             'pageNote' => 'Documentation',
-            'active' => 'log'
+            'active' => 'log',
         );
         return view('sximo.config.log', $this->data);
     }
 
-    public function getClearlog() {
+    public function getClearlog()
+    {
 
         $dir = base_path() . "/storage/logs";
         foreach (glob($dir . '/*') as $file) {
@@ -245,24 +250,27 @@ class ConfigController extends Controller {
         return Redirect::to('sximo/config/log')->with('messagetext', 'Cache has been cleared !')->with('msgstatus', 'success');
     }
 
-    function removeDir($dir) {
+    public function removeDir($dir)
+    {
         foreach (glob($dir . '/*') as $file) {
-            if (is_dir($file))
+            if (is_dir($file)) {
                 removedir($file);
-            else
+            } else {
                 unlink($file);
+            }
+
         }
         rmdir($dir);
     }
 
-    public function getTranslation(Request $request, $type = null) {
+    public function getTranslation(Request $request, $type = null)
+    {
         if (!is_null($request->input('edit'))) {
             $file = (!is_null($request->input('file')) ? $request->input('file') : 'core.php');
             $files = scandir(base_path() . "/resources/lang/" . $request->input('edit') . "/");
 
             //$str = serialize(file_get_contents('./protected/app/lang/'.$request->input('edit').'/core.php'));
             $str = \File::getRequire(base_path() . "/resources/lang/" . $request->input('edit') . '/' . $file);
-
 
             $this->data = array(
                 'pageTitle' => 'Help Manual',
@@ -285,11 +293,13 @@ class ConfigController extends Controller {
         return view('sximo.config.translation.' . $template, $this->data);
     }
 
-    public function getAddtranslation() {
+    public function getAddtranslation()
+    {
         return view("sximo.config.translation.create");
     }
 
-    public function postAddtranslation(Request $request) {
+    public function postAddtranslation(Request $request)
+    {
         $rules = array(
             'name' => 'required',
             'folder' => 'required|alpha',
@@ -315,13 +325,14 @@ class ConfigController extends Controller {
                 }
             }
             return Redirect::to('sximo/config/translation')->with('messagetect', 'New Translation has been added !')->with('msgstatus', 'success');
-            ;
+
         } else {
             return Redirect::to('sximo/config/translation')->with('messagetext', 'Failed to add translation !')->with('msgstatus', 'error')->withErrors($validator)->withInput();
         }
     }
 
-    public function postSavetranslation(Request $request) {
+    public function postSavetranslation(Request $request)
+    {
         $template = base_path();
 
         $form = "<?php \n";
@@ -344,15 +355,16 @@ class ConfigController extends Controller {
         $lang = $request->input('lang');
         $file = $request->input('file');
         $filename = $template . '/resources/lang/' . $lang . '/' . $file;
-        //	$filename = 'lang.php';
+        //    $filename = 'lang.php';
         $fp = fopen($filename, "w+");
         fwrite($fp, $form);
         fclose($fp);
         return Redirect::to('sximo/config/translation?edit=' . $lang . '&file=' . $file)
-                        ->with('messagetext', 'Translation has been saved !')->with('msgstatus', 'success');
+            ->with('messagetext', 'Translation has been saved !')->with('msgstatus', 'success');
     }
 
-    public function getRemovetranslation($folder) {
+    public function getRemovetranslation($folder)
+    {
         self::removeDir(base_path() . "/resources/lang/" . $folder);
         return Redirect::to('sximo/config/translation')->with('messagetext', 'Translation has been removed !')->with('msgstatus', 'success');
     }

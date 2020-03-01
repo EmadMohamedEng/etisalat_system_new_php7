@@ -63,6 +63,32 @@ return [
             ]) : [],
         ],
 
+        'smsgateway' => [
+			'driver'    => 'mysql',
+			//'host'      => '41.33.203.74',
+			 'host'      => '10.2.10.20',
+			'database'  => 'sqlbox_egy',
+			'username'  => 'root',
+			'password'  => 'root',
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
+			'strict'    => false,
+		],
+        
+        'updateSource' => [
+            'driver'    => 'mysql',
+            //'host'      => '41.33.203.74',
+             'host'      => '10.2.10.11',
+            'database'  => 'etisalat_etisalat',
+            'username'  => 'etisalat_admin',
+            'password'  => 'kCiEbjwQ',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+            'strict'    => false,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
