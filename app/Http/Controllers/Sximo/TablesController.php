@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers\sximo;
 
-use App\Http\Controllers\controller;
+use App\Http\Controllers\Controller;
 use App\Groups;
 use App\Models\Sximo\Module;
 use App\User;

@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Controllers\controller;
+use App\Http\Controllers\Controller;
 use App\Models\Subscriberhistory;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator as Paginator;

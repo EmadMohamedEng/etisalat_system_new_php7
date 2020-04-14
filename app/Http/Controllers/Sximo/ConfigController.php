@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\sximo;
 
-use App\Http\Controllers\controller;
+use App\Http\Controllers\Controller;
 use App\Models\Core\Groups;
 use Illuminate\Http\Request;
 use Input;

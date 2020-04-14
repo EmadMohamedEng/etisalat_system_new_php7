@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Controllers\controller;
+use App\Http\Controllers\Controller;
 use App\Models\Phonescategories;
 use Carbon\Carbon;
 use Illuminate\Http\Request;

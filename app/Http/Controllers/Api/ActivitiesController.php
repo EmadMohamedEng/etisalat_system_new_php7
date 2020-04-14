@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\controller;
+use App\Http\Controllers\Controller;
 use App\Models\Activities;
 use App\Models\Branches;
 use App\Models\Projects;

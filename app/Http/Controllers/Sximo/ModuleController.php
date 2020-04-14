@@ -3,7 +3,7 @@
 use App\Models\Sximo\Module;
 use App\Library\ZipHelpers;
 use App\Library\SximoHelpers;
-use App\Http\Controllers\controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator, Input, Redirect; 
 
